@@ -1,0 +1,219 @@
+@import "../../sass/main.module.scss";
+//------------------------------
+// Mobile first approach
+//------------------------------
+.landingPage {
+  background-color: $color-green;
+  min-height: 100vh;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 30% 30% auto;
+  grid-template-areas:
+    "topleft        middle  topright"
+    "bottomleft     middle  bottomright"
+    "buttons        buttons buttons";
+  padding: 7% 5% 0 5%;
+  margin: 0 1% 0 1%;
+  .topLeft {
+    grid-area: topleft;
+    background-color: $color-pink;
+    border-radius: 20px 0px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30%;
+    height: 90%;
+    img {
+      height: 80%;
+      width: 80%;
+    }
+  }
+  .bottomLeft {
+    grid-area: bottomleft;
+    background-color: $color-copper;
+    border-radius: 0 0 0 90%;
+    margin-top: 20%;
+  }
+  .middle {
+    grid-area: middle;
+    background-color: $color-white;
+    border-radius: 30px 0px 0px 0;
+    p {
+      @extend %main-font;
+      font-size: 35px;
+      font-weight: 800;
+      color: $color-green;
+      padding: 5%;
+      margin-bottom: 10%;
+    }
+  }
+  .topRight {
+    background-color: $color-copper;
+    border-radius: 0 90% 0 0;
+  }
+  .bottomRightMobile {
+    background-color: $color-pink;
+    border-radius: 0 0 10px 0;
+    margin-bottom: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      transform: rotate(-50deg);
+      height: 50px;
+    }
+  }
+  //BUTTON
+  .bottomRight {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    .LandingPageButton {
+      text-align: left;
+      margin: 20px 2px;
+      height: 35px;
+      border-radius: 2px;
+      border: none;
+      color: $color-white;
+      transition: 0.3s ease;
+      @extend %main-font;
+      font-size: 12px;
+      background-color: $color-copper;
+      width: 87px;
+      text-align: center;
+      align-items: center;
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+.registration {
+  grid-area: howToo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+  padding-bottom: 5%;
+
+  .registrationProcess {
+    padding: 1% 13% 0% 0%;
+    color: $color-white;
+    @extend %secondary-font;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 15px;
+    img {
+      width: 70px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      height: 70px;
+      padding-left: none;
+      border-radius: 50%;
+    }
+    p {
+      padding: 5%;
+      line-height: 1.2;
+    }
+  }
+}
+
+//------------------------------------------
+// medium sizes devices
+//------------------------------------------
+@media (min-width: 550px) {
+  .gridContainer {
+    .middle {
+      p {
+        font-size: 45px;
+        font-weight: 800;
+      }
+    }
+    .bottomRight {
+      .LandingPageButton {
+        margin: 20px 10px;
+      }
+    }
+  }
+}
+//------------------------------------------
+// Large devices laptops
+//------------------------------------------
+@media (min-width: 1000px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 280px 280px;
+    grid-template-areas:
+      "topleft    middle topright"
+      "bottomleft middle buttons";
+    padding: 2.4% 10% 0 10%;
+    .topLeft {
+      margin-top: 30%;
+      height: 80%;
+    }
+    .bottomLeft {
+      margin-top: 10%;
+    }
+    .middle {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 120px;
+        font-weight: 800;
+        margin-bottom: 0;
+        line-height: 1;
+      }
+    }
+    .topRight {
+      grid-area: topright;
+      border-radius: 0 95% 0 0;
+      background-color: $color-copper;
+    }
+    .bottomRight {
+      grid-area: buttons;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 0%;
+      padding-left: 2%;
+      button.LandingPageButton {
+        width: 250px;
+        font-size: 20px;
+        padding-left: 5px;
+        height: 50px;
+        font-size: 30px;
+      }
+    }
+    .bottomRightMobile {
+      display: none;
+    }
+  }
+  .registration {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 0%;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    .registrationProcess {
+      padding: 1.5% 5% 0% 5%;
+      img {
+        width: 150px;
+        height: 150px;
+      }
+      p {
+        font-size: 23px;
+      }
+    }
+  }
+}

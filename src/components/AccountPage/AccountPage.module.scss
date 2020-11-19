@@ -1,0 +1,458 @@
+@import "../../sass/main.module.scss";
+
+.account {
+  background-color: $color-green;
+}
+.boxtitle {
+  color: $color-white;
+  background-color: $color-green;
+  font-size: 50px;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+// ***** This relates to the favourites and recently viewed *****
+// .wrapper{
+//   overflow: hidden;
+//   margin: 30px 0;
+//   height: 240vh;
+//   background-color: $color-green;
+
+//   .cardRender {
+//     padding: 0 0;
+//     margin: 0;
+//     background-color: $color-green;
+//     font-family: 'Josefin Sans', sans-serif;
+//     color: $color-white;
+//     transform: scale(.5);
+//     transform-origin: 0 0;
+//     box-sizing: border-box;
+//     width: 200%;
+//     overflow: hidden;
+//   }
+// }
+
+.wrapperRedeemed {
+  overflow: hidden;
+  margin: 30px 0;
+  height: auto;
+  background-color: $color-green;
+
+  .cardRenderRedeemed {
+    padding: 0 0;
+    margin: 0;
+    background-color: $color-green;
+    font-family: "Josefin Sans", sans-serif;
+    color: $color-white;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+
+    .offerForm {
+      text-align: center;
+
+      .offer {
+        position: relative;
+        background-color: $color-copper;
+        border: 3px $color-lightgreen solid;
+        border-radius: 15px;
+        margin: 15px auto;
+        padding: 20px 10px;
+        width: 90%;
+
+        p {
+          color: $color-desert;
+          margin: 5px;
+          font-size: 16px;
+        }
+
+        .offerRestaurant {
+          color: $color-desert;
+          display: block;
+          font-weight: bold;
+          font-size: 1rem;
+          margin: 5px;
+        }
+
+        .offerCode {
+          color: $color-white;
+          display: block;
+          font-weight: bold;
+          font-size: 1rem;
+          margin: 10px;
+          word-break: break-all;
+          white-space: normal;
+        }
+      }
+    }
+  }
+}
+
+.page {
+  @extend %main-font;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $color-green;
+
+  .form {
+    width: 40px;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: $color-white;
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 8px solid $color-copper;
+
+    h3 {
+      height: auto;
+      font-size: 23px;
+      color: $color-green;
+      cursor: default;
+      margin-top: 5px;
+    }
+
+    h2 {
+      color: $color-white;
+    }
+
+    .account_btn {
+      font-size: 22px;
+      height: 50px;
+      width: 150px;
+      background-color: $color-lightgreen;
+      color: $color-white;
+      cursor: pointer;
+      margin: 5px;
+      margin-bottom: 5px;
+      outline: none;
+
+      &:hover {
+        background-color: $color-green;
+        box-shadow: 0px 0px 2px black, 0 0 25px lightgrey, 0 0 5px black;
+      }
+    }
+
+    .refer_btn {
+      font-size: 22px;
+      background-color: $color-lightgreen;
+      color: $color-white;
+      cursor: pointer;
+      outline: none;
+      padding: 20px;
+
+      &:hover {
+        background-color: $color-green;
+        box-shadow: 0px 0px 2px black, 0 0 25px lightgrey, 0 0 5px black;
+      }
+    }
+
+    .form_container {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    input {
+      padding: 6px 8px;
+      margin: 6px 0;
+      width: 250px;
+      border: 2px solid black;
+      font-size: 18px;
+      outline: none;
+    }
+
+    p {
+      font-size: 19px;
+      color: black;
+      margin-top: 10px;
+    }
+  }
+}
+//BUTTON
+.navButtons {
+  grid-area: buttons;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: fixed;
+  width: 100%;
+  padding: 5px;
+  bottom: 0%;
+  z-index: 1;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: $color-lightgreen;
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 0;
+    margin: 0%;
+    width: 100%;
+
+    button {
+      height: 40px;
+      width: 70px;
+      margin: 0%;
+      padding: 1%;
+      background-color: $color-green;
+      color: $color-white;
+      border-radius: 2px;
+
+      &:hover {
+        background-color: $color-copper;
+        text-shadow: 0 0 1px white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.boxtitle {
+  color: $color-white;
+  font-size: 50px;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 390px) {
+  .wrapper {
+    height: 120vh;
+  }
+}
+
+@media (min-height: 800px) {
+  .page {
+    .form {
+      h3 {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+
+      input {
+        padding: 8px 10px;
+        margin: 7.5px 0;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 525px) {
+  .wrapper {
+    height: 90vh;
+  }
+
+  
+}
+
+@media (min-width: 600px) {
+  .page {
+    .form {
+      .register {
+        input {
+          padding: 10px 15px;
+          width: 175px;
+        }
+      }
+    }
+    .navButtons {
+      padding: 10px;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .page {
+    .form {
+      input {
+        padding: 10px 15px;
+        width: 200px;
+      }
+    }
+  }
+  .navButtons {
+    .buttons {
+      button {
+        width: 130px;
+        font-size: 14px;
+      }
+    }
+  }
+  .wrapper {
+    height: 80vh;
+  }
+}
+
+@media (min-height: 800px) {
+  .page {
+    .form {
+      .register {
+        h3 {
+          font-size: 30px;
+          margin-bottom: 30px;
+        }
+        input {
+          padding: 8px 10px;
+          margin: 7.5px 0;
+        }
+
+        .terms {
+          margin: 5px 0;
+        }
+
+        .update_btn {
+          height: 40px;
+          width: 170px;
+          margin-bottom: 15px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .page {
+    .form {
+      width: 50%;
+      h3 {
+        font-size: 44px;
+      }
+
+      input {
+        width: 200px;
+      }
+    }
+  }
+  .wrapperRedeemed {
+    .cardRenderRedeemed {
+      .offerForm {
+        .offer {
+          p {
+            font-size: 2rem;
+          }
+          .offerRestaurant {
+            font-size: 2rem;
+          }
+          .offerCode {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    height: 140vh;
+  }
+}
+@media (max-width: 600px) {
+  .page {
+    .boxtitle {
+      font-size: 40px;
+      margin-top: 30px;
+    }
+
+    .form {
+      height: 70%;
+      width: 100%;
+    }
+  }
+}
+
+.boxtitle {
+  color: white;
+  font-size: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+  .profileBox {
+    width: 100%;
+    height: 90vh;
+    margin-top: 120px;
+  }
+
+
+@media (min-width: 1118px) {
+  .wrapper {
+    height: 120vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page {
+    .form {
+      input {
+        width: 275px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .page {
+    .form {
+      input {
+        width: 275px;
+      }
+    }
+  }
+}
+.favourites {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 200px;
+}
+
+//SECTIONS
+
+// .favourites {
+//     overflow: hidden; /* Hide scrollbars */
+//     overflow-x: hidden;
+//     overflow-y: scroll;
+//     width: 100vw;
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     margin: 200px;
+// }
+
+@media (min-width: 1600px) {
+  .wrapper {
+    height: 90vh;
+  }
+}

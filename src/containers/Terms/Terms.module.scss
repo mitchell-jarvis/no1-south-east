@@ -1,0 +1,119 @@
+@import "../../sass/main.module.scss";
+
+.page {
+    height: 100vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $color-green;
+
+    .terms {
+        display: flex;
+        background-color: $color-white;
+        width: 80%;
+        height: 70vh;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 8px solid $color-copper;
+
+        h3 {
+            height: auto;
+            font-size: 23px;
+            color: $color-green;
+            cursor: default;
+            margin-bottom: 5px;
+        }
+
+        .faqs {
+            font-size: 15px;
+            margin-top: 10px;
+            
+            :link {
+                margin-left: 4px;
+            }
+        }
+
+        p {
+            font-size: 10px;
+            color: black;
+            margin-top: 2px;
+            width: 100%;
+            padding: 1px 10px;
+        }
+
+        img {
+            margin-top: 10px;
+            height: 80px;
+            width: 250px;
+        }
+    }
+}
+
+@media (min-height: 600px) {
+    .page {
+        .terms {
+            h3 {
+                font-size: 30px;
+                margin-bottom: 5px;
+            }
+            .faqs {
+                margin: 5px 0;
+            }
+            p {
+                font-size: 11px;
+                margin-top: 5px;
+            }
+        }
+    } 
+}
+
+@media (min-height: 900px) {
+    .page {
+        .terms {
+            h3 {
+                font-size: 44px;
+                margin-bottom: 0;
+            }
+            span {
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 920px) {
+    .page {
+        .terms {
+            width: 50%;
+            h3 {
+            font-size: 44px;
+            }
+            p {
+                font-size: 18px;
+            }
+            img {
+                height: 130px;
+                width: 380px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .page {
+      .terms {
+            p {
+              font-size: 20px;
+            }
+            img {
+                height: 110px;
+            }
+        }
+    }
+}

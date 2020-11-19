@@ -1,0 +1,177 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #233D2A;
+}
+.page .form {
+  display: flex;
+  background-color: #ffffff;
+  width: 80vw;
+  height: 70vh;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  border: 8px solid #CF6B58;
+  margin: 0 auto;
+}
+.page .form .signin h3 {
+  height: auto;
+  font-size: 35px;
+  color: #233D2A;
+  cursor: default;
+  line-height: 2.5rem;
+}
+.page .form .signin input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 200px;
+  border-bottom: 2px solid black;
+  font-size: 18px;
+  outline: none;
+}
+.page .form .signin .form_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 4vh 0;
+  flex-direction: column;
+  align-items: center;
+}
+.page .form .signin .sign_in_btn {
+  font-size: 22px;
+  height: 40px;
+  width: 170px;
+  background-color: #82A28B;
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+  border-radius: 2px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.page .form .signin .sign_in_btn:hover {
+  background-color: #233D2A;
+  text-shadow: 0 0 2px white;
+  box-shadow: 0px 0px 2px black, 0 0 25px lightgrey, 0 0 5px black;
+}
+.page .form .signin .googleBtn {
+  width: 184px;
+  height: 35px;
+  background-color: #4285f4;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 0 auto 10px;
+}
+.page .form .signin .googleBtn .googleIconWrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 40px;
+  height: 33px;
+  border-radius: 25px 2px 2px 25px;
+  background-color: #ffffff;
+}
+.page .form .signin .googleBtn .googleIcon {
+  position: absolute;
+  margin-top: 7px;
+  margin-left: -8px;
+  width: 18px;
+  height: 18px;
+}
+.page .form .signin .googleBtn .btnText {
+  float: right;
+  margin: 1px 5px 0;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  font-family: "Roboto";
+}
+.page .form .signin .googleBtn:hover {
+  box-shadow: 0 0 6px #4285f4;
+}
+.page .form .signin .googleBtn:active {
+  background: #1669F2;
+}
+.page .form .terms {
+  font-size: 17px;
+  margin: -10px 0 20px;
+}
+.page .form p {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 5px;
+  line-height: 2rem;
+}
+.page .form p button {
+  font-size: 18px;
+  background-color: #82A28B;
+  color: #ffffff;
+  padding: 3px 3px 1px;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.page .form p button:hover {
+  background-color: #233D2A;
+  text-shadow: 0 0 1px white;
+  box-shadow: 0px 0px 2px black, 0 0 25px lightgrey, 0 0 5px black;
+}
+.page .signedInMessage h3 {
+  height: auto;
+  color: #233D2A;
+  cursor: default;
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+.page .signedInMessage button {
+  width: auto;
+  font-size: 18px;
+  height: 50px;
+  background-color: #82A28B;
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+  border-radius: 2px;
+  text-decoration: none;
+  margin: 10px 10px 0;
+}
+.page .signedInMessage button:hover {
+  background-color: #233D2A;
+  text-shadow: 0 0 2px white;
+  box-shadow: 0px 0px 2px black, 0 0 25px lightgrey, 0 0 5px black;
+}
+
+@media (min-width: 720px) {
+  .page .form .signin h3 {
+    font-size: 45px;
+  }
+  .page .form .signin input {
+    width: 200px;
+  }
+}
+@media (min-width: 900px) {
+  .page .form {
+    width: 50%;
+  }
+  .page .form .signin h3 {
+    font-size: 54px;
+  }
+  .page .form .signin input {
+    width: 275px;
+  }
+}

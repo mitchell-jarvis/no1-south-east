@@ -1,0 +1,207 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.gridContainer .bottomRight .LandingPageButton, .gridContainer .middle p {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.registration .registrationProcess {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.landingPage {
+  background-color: #233D2A;
+  min-height: 100vh;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 30% 30% auto;
+  grid-template-areas: "topleft        middle  topright" "bottomleft     middle  bottomright" "buttons        buttons buttons";
+  padding: 7% 5% 0 5%;
+  margin: 0 1% 0 1%;
+}
+.gridContainer .topLeft {
+  grid-area: topleft;
+  background-color: #D4BCB6;
+  border-radius: 20px 0px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30%;
+  height: 90%;
+}
+.gridContainer .topLeft img {
+  height: 80%;
+  width: 80%;
+}
+.gridContainer .bottomLeft {
+  grid-area: bottomleft;
+  background-color: #CF6B58;
+  border-radius: 0 0 0 90%;
+  margin-top: 20%;
+}
+.gridContainer .middle {
+  grid-area: middle;
+  background-color: #ffffff;
+  border-radius: 30px 0px 0px 0;
+}
+.gridContainer .middle p {
+  font-size: 35px;
+  font-weight: 800;
+  color: #233D2A;
+  padding: 5%;
+  margin-bottom: 10%;
+}
+.gridContainer .topRight {
+  background-color: #CF6B58;
+  border-radius: 0 90% 0 0;
+}
+.gridContainer .bottomRightMobile {
+  background-color: #D4BCB6;
+  border-radius: 0 0 10px 0;
+  margin-bottom: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gridContainer .bottomRightMobile img {
+  transform: rotate(-50deg);
+  height: 50px;
+}
+.gridContainer .bottomRight {
+  grid-area: buttons;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+.gridContainer .bottomRight .LandingPageButton {
+  text-align: left;
+  margin: 20px 10px;
+  height: 35px;
+  border-radius: 2px;
+  border: none;
+  color: #ffffff;
+  transition: 0.3s ease;
+  font-size: 12px;
+  background-color: #CF6B58;
+  width: 85px;
+  text-align: center;
+  align-items: center;
+}
+.gridContainer .bottomRight .LandingPageButton:focus {
+  outline: none;
+  border: none;
+}
+
+.registration {
+  grid-area: howToo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+  padding-bottom: 5%;
+}
+.registration .registrationProcess {
+  padding: 1% 13% 0% 0%;
+  color: #ffffff;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 15px;
+}
+.registration .registrationProcess img {
+  width: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 70px;
+  padding-left: none;
+  border-radius: 50%;
+}
+.registration .registrationProcess p {
+  padding: 5%;
+  line-height: 1.2;
+}
+
+@media (min-width: 550px) {
+  .gridContainer .middle p {
+    font-size: 45px;
+    font-weight: 800;
+  }
+}
+@media (min-width: 1000px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 280px 280px;
+    grid-template-areas: "topleft    middle topright" "bottomleft middle buttons";
+    padding: 2.4% 10% 0 10%;
+  }
+  .gridContainer .topLeft {
+    margin-top: 30%;
+    height: 80%;
+  }
+  .gridContainer .bottomLeft {
+    margin-top: 10%;
+  }
+  .gridContainer .middle {
+    display: flex;
+    align-items: center;
+  }
+  .gridContainer .middle p {
+    font-size: 120px;
+    font-weight: 800;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  .gridContainer .topRight {
+    grid-area: topright;
+    border-radius: 0 95% 0 0;
+    background-color: #CF6B58;
+  }
+  .gridContainer .bottomRight {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0%;
+    padding-left: 2%;
+  }
+  .gridContainer .bottomRight button.LandingPageButton {
+    width: 250px;
+    font-size: 20px;
+    padding-left: 5px;
+    height: 50px;
+    font-size: 30px;
+  }
+  .gridContainer .bottomRightMobile {
+    display: none;
+  }
+
+  .registration {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 0%;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+  .registration .registrationProcess {
+    padding: 1.5% 5% 0% 5%;
+  }
+  .registration .registrationProcess img {
+    width: 150px;
+    height: 150px;
+  }
+  .registration .registrationProcess p {
+    font-size: 23px;
+  }
+}

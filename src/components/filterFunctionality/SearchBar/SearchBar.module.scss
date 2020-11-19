@@ -1,0 +1,31 @@
+﻿@import '../../../sass/abstracts/variables';
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: $color-green;
+  width: auto;
+
+  .fa {
+    color: $color-green;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+  input {
+    width: 200px;
+    padding: 3%;
+    margin: 0 10px;
+    border: none;
+    outline:none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .search {
+    input {
+      width: 250px;
+    }
+  }
+}

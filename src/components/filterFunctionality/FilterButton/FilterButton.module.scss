@@ -1,0 +1,18 @@
+@import '../../../sass/abstracts/variables';
+
+.filter {
+    button {
+        font-size: 30px;
+        margin: 20px auto;
+        background-color: $color-lightgreen;
+        color: $color-green;
+        padding: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        border-radius: 2px;
+        border: none;
+        outline:none;
+    }
+}

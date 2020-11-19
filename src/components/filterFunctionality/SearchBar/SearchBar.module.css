@@ -1,0 +1,25 @@
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #233D2A;
+  width: auto;
+}
+.search .fa {
+  color: #233D2A;
+  cursor: pointer;
+  font-size: 30px;
+}
+.search input {
+  width: 200px;
+  padding: 3%;
+  margin: 0 10px;
+  border: none;
+  outline: none;
+}
+
+@media (min-width: 1000px) {
+  .search input {
+    width: 250px;
+  }
+}

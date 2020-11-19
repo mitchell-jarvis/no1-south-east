@@ -1,0 +1,101 @@
+@import "../../../sass/main.module.scss";
+@import "../../../sass/abstracts/variables";
+
+.filtermenu {
+  position: fixed;
+  /* Stay in place */
+  top: 0px;
+  /* Place content 60px from the top */
+  width: 320px;
+  right: 0px;
+  height: calc(100% - 30px);
+  background-color: $color-copper;
+  color: rgb(44, 41, 38);
+  border-bottom-left-radius: 140px;
+  /* Stay on top */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  padding: 10px;
+  padding-top: 10%;
+  box-sizing: initial;
+  border: initial;
+  margin: initial;
+  z-index: 200;
+
+  .closebtn {
+    position: absolute;
+    background: none;
+    top: 1%;
+    right: 5%;
+    font-size: 65px;
+    text-decoration: none;
+    color: $color-green;
+  }
+
+  .whenNeed,
+  .timeNeed,
+  .dealNeed,
+  .dietaryNeed,
+  .slider {
+    padding: 4px;
+
+    p {
+      text-align: center;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  .icons {
+
+    display: flex;
+    justify-content: space-around;
+    padding: 2px;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  button {
+    margin: 6px;
+  }
+}
+
+@media (min-width: 700px) {
+  .filtermenu {
+    font-size: 15px;
+    padding-top: 10px;
+  
+    .closebtn {
+      top: -26px;
+      right: -2%;
+      font-size: 75px;
+    }
+  
+    .whenNeed,
+    .timeNeed,
+    .dealNeed,
+    .dietaryNeed,
+    .slider {
+      padding-top: 5%;
+  
+      p {
+        font-size: 18px;
+      }
+    }
+  
+    .icons {
+      padding: 8px;
+    }
+    button {
+      margin: 10px;
+    }
+  }
+}

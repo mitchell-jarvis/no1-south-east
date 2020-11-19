@@ -1,0 +1,19 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.feedbackPanel {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.feedbackPanel {
+  height: 90vh;
+  text-align: center;
+  padding-top: 3%;
+  font-size: 20px;
+  line-height: 2;
+  color: #ffffff;
+  opacity: 0.5;
+}

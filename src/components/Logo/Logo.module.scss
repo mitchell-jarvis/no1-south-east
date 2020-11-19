@@ -1,0 +1,23 @@
+.logoContainer {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    margin-top: 10px;
+  
+    img {
+      height: 80px;
+      width: 140px;
+    }
+  }
+  
+  @media (min-height: 800px) {
+    .logoContainer {
+      img {
+        height: 110px;
+        width: 200px;
+      }
+    }
+  }
+  

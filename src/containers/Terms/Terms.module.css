@@ -1,0 +1,98 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #233D2A;
+}
+.page .terms {
+  display: flex;
+  background-color: #ffffff;
+  width: 80%;
+  height: 70vh;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 8px solid #CF6B58;
+}
+.page .terms h3 {
+  height: auto;
+  font-size: 23px;
+  color: #233D2A;
+  cursor: default;
+  margin-bottom: 5px;
+}
+.page .terms .faqs {
+  font-size: 15px;
+  margin-top: 10px;
+}
+.page .terms .faqs :link {
+  margin-left: 4px;
+}
+.page .terms p {
+  font-size: 10px;
+  color: black;
+  margin-top: 2px;
+  width: 100%;
+  padding: 1px 10px;
+}
+.page .terms img {
+  margin-top: 10px;
+  height: 80px;
+  width: 250px;
+}
+
+@media (min-height: 600px) {
+  .page .terms h3 {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .page .terms .faqs {
+    margin: 5px 0;
+  }
+  .page .terms p {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+}
+@media (min-height: 900px) {
+  .page .terms h3 {
+    font-size: 44px;
+    margin-bottom: 0;
+  }
+  .page .terms span p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 920px) {
+  .page .terms {
+    width: 50%;
+  }
+  .page .terms h3 {
+    font-size: 44px;
+  }
+  .page .terms p {
+    font-size: 18px;
+  }
+  .page .terms img {
+    height: 130px;
+    width: 380px;
+  }
+}
+@media (min-width: 1200px) {
+  .page .terms p {
+    font-size: 20px;
+  }
+  .page .terms img {
+    height: 110px;
+  }
+}

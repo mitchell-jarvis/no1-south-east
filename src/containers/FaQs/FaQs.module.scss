@@ -1,0 +1,121 @@
+@import "../../sass/main.module.scss";
+.page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $color-green;
+  .faqs {
+    display: flex;
+    background-color: $color-white;
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 8px solid $color-copper;
+    .faqscontainer {
+      h3 {
+        height: auto;
+        font-size: 23px;
+        color: $color-green;
+        cursor: default;
+        margin-bottom: 5px;
+      }
+      span {
+        margin-top: 10px;
+        p {
+          font-size: 10px;
+          color: black;
+          width: 100%;
+          padding: 1px 10px;
+          &:nth-child(odd) {
+            font-weight: bold;
+          }
+        }
+      }
+      img {
+        margin-top: 10px;
+        height: 80px;
+        width: 250px;
+      }
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .page {
+    .faqs {
+      width: 50%;
+      .faqscontainer {
+        h3 {
+          font-size: 44px;
+        }
+        span {
+          p {
+            font-size: 12px;
+          }
+        }
+        img {
+          height: 130px;
+          width: 380px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .page {
+    .faqs {
+      .faqscontainer {
+        span {
+          p {
+            font-size: 16px;
+          }
+        }
+        img {
+          height: 110px;
+        }
+      }
+    }
+  }
+}
+@media (min-height: 600px) {
+  .page {
+    .faqs {
+      .faqscontainer {
+        h3 {
+          font-size: 30px;
+          margin-bottom: 5px;
+        }
+        span {
+          p {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-height: 900px) {
+  .page {
+    .faqs {
+      .faqscontainer {
+        h3 {
+          font-size: 44px;
+          margin-bottom: 0;
+        }
+        span {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

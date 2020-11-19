@@ -1,0 +1,83 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #233D2A;
+}
+.page .faqs {
+  display: flex;
+  background-color: #ffffff;
+  width: 80%;
+  height: 70vh;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 8px solid #CF6B58;
+}
+.page .faqs .faqscontainer h3 {
+  height: auto;
+  font-size: 23px;
+  color: #233D2A;
+  cursor: default;
+  margin-bottom: 5px;
+}
+.page .faqs .faqscontainer span {
+  margin-top: 10px;
+}
+.page .faqs .faqscontainer span p {
+  font-size: 10px;
+  color: black;
+  width: 100%;
+  padding: 1px 10px;
+}
+.page .faqs .faqscontainer span p:nth-child(odd) {
+  font-weight: bold;
+}
+.page .faqs .faqscontainer img {
+  margin-top: 10px;
+  height: 80px;
+  width: 250px;
+}
+
+@media (min-height: 820px) {
+  .page .faqs .faqscontainer h3 {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .page .faqs .faqscontainer span p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 920px) {
+  .page .faqs {
+    width: 50%;
+  }
+  .page .faqs .faqscontainer h3 {
+    font-size: 44px;
+  }
+  .page .faqs .faqscontainer span p {
+    font-size: 11px;
+  }
+  .page .faqs .faqscontainer img {
+    height: 130px;
+    width: 380px;
+  }
+}
+@media (min-width: 1200px) {
+  .page .faqs .faqscontainer span p {
+    font-size: 10px;
+  }
+  .page .faqs .faqscontainer img {
+    height: 110px;
+  }
+}

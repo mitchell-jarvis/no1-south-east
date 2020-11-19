@@ -1,0 +1,12 @@
+@import '../../sass/abstracts/variables';
+
+.footer {
+    width: 100%;
+    background-color: $color-lightgreen;
+    color:black;
+    padding: 8px 0 8px 20px;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+
+}

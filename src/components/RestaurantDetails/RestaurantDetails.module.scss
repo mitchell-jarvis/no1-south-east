@@ -1,0 +1,116 @@
+@import '../../sass/abstracts/variables';
+@import '../../sass/base/typography';
+
+
+.accountLink {
+    position:fixed;
+    padding: 1%;
+}
+
+.RestaurantDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25% 5% 0% 3%;
+    background-color: $color-green;
+    color: $color-white;
+
+    h1 {
+        margin-top: 10px;
+        display: flex;
+        text-align: center;
+        font-size: 300%;
+        border-bottom: 2px white solid;
+    }
+
+    .responsiveImage {
+        display: flex;
+        justify-content: center;
+        height: auto;
+        max-width: 80%;
+        width: auto;
+        object-fit: scale-down;
+        padding: 20px 0;
+    }
+
+
+    .restaurantDescription {
+        font-size: 15px;
+        padding: 10px 5%;
+
+        .paragraph {
+            padding-bottom: 8px;
+            h4, p {
+                display: inline;
+            }
+            p {
+                opacity: 0.5;
+            }
+        }
+    }
+    
+    .fontawesomeContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 25px;
+        width:60%;
+        color: $color-white;
+        margin: 10px;
+
+    // change default link behavior
+        a { 
+            text-decoration: none;
+            color: $color-white;
+        }
+        
+        .span{
+            width:100%;
+        }
+    }
+    
+    button {
+    height: 45px;
+    background-color:$color-copper;
+    color: $color-white;
+    transition: 0.3s ease;
+    font-size: 15px;
+    border-radius: 2%;
+    cursor: pointer;
+    margin: 5px 0 15px 0;
+    width: 33%;
+    }
+}
+
+@media (min-width:500px) {
+    .RestaurantDetails{
+        padding-top:12%;
+    }
+}    
+
+@media (min-width:800px) {
+    .RestaurantDetails {
+        padding-top:8%;
+        height: auto;
+
+        .restaurantDescription{
+            font-size: 20px;
+        }
+
+        .image {
+            .responsiveImage {
+                width: 75%;
+            }
+        }
+
+        .fontawesomeContainer {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        button {
+            margin: 15px 0 25px 0;
+            width: 15%;
+        }
+    }
+}
