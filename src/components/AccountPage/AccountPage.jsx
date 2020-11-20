@@ -9,15 +9,15 @@ import moment from "moment";
 import { Link } from "@reach/router";
 const AccountPage = ({ signOut, user }) => {
   //take the favourites and render them in the pages below using this operator
-  // const renderCards = favourites.length ? (
-  //   //cut down the favs and only take 5
-  //   <CardList
-  //     className={styles.cardList}
-  //     restaurants={favourites.slice(0, 5)}
-  //   />
-  // ) : (
-  //   <FeedbackPanel header="No favourites" />
-  // );
+  const renderCards = favourites.length ? (
+    //cut down the favs and only take 5
+    <CardList
+      className={styles.cardList}
+      restaurants={favourites.slice(0, 5)}
+    />
+  ) : (
+    <FeedbackPanel header="No favourites" />
+  );
   // we have used a placeholder for the FAVs, Saved and redeemed
   // save offer code in saved offers on profile page.
   // on profile page check the db for any offers that contain the user uid and return.
