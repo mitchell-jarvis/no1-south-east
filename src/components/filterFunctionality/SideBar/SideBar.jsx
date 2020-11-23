@@ -57,8 +57,8 @@ const SideBar = ({ closeFilterMenu, filterRestaurants }) => {
   // and this one is for meal type icons (breakfast, lunch, dinner)
   const renderMealTypeIcons = mealTimeIcons.map((meal) => {
     return (
-      <div>
-        <ImageIcon data={meal} collectFilters={collectFilters} key={meal.id} />
+      <div key={meal.id}>
+        <ImageIcon data={meal} collectFilters={collectFilters}  />
         <p>{meal.text}</p>
       </div>
     );

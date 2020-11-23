@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styles from "./AccountPage.module.scss";
 import Logo from "../Logo/Logo";
-// import favourites from "../../data/restaurants";
-// import CardList from "../CardList";
-// import FeedbackPanel from "../filterFunctionality/FeedbackPanel";
+import favourites from "../../data/restaurants";
+import CardList from "../CardList";
+import FeedbackPanel from "../filterFunctionality/FeedbackPanel";
 import { firestore } from "../../firebase";
 import moment from "moment";
 import { Link } from "@reach/router";

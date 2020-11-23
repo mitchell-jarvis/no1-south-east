@@ -4,7 +4,7 @@ import styles from "./Footer.module.scss";
 const Footer = () => {
   return (
     <>
-      <footer class={styles.footer}>Copyright © 2020 No1SouthEast. All Rights Reserved.</footer>
+      <footer className={styles.footer}>Copyright © 2020 No1SouthEast. All Rights Reserved.</footer>
     </>
   );
 };
